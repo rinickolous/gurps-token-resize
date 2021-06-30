@@ -12,4 +12,4 @@ This repository includes templates for tokens of various sizes found in GURPS so
 To use these, simply overlay your desired actor token over the template in any image editing software of your choice.
 
 Examples of use:
-![Example of use](https://github.com/rinickolous/gurps-token-resize/raw/master/Images/Example.png "Example of Use")
+![Example of use](https://raw.githubusercontent.com/rinickolous/gurps-token-resize/main/Images/Example.png "Example of Use")
