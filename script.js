@@ -20,11 +20,8 @@ setTimeout(async () => {
                             let new_value = input*2 - 1;
                             if (actor.isToken) {
                                 actor._findToken().update({"scale":new_value});
-                                return actor.update({"token.scale":new_value});
-                            } else {
-                                return actor.update({"token.scale":new_value});
                             }
-                            
+                            return actor.update({"token.scale":new_value});
                         }
                     }
                 },
