@@ -1,5 +1,5 @@
-let actor = GURPS.LastActor;
-if (!actor) return ui.notifications.error("You must have an actor selected!");
+let resize_actor = GURPS.LastActor;
+if (!resize_actor) return ui.notifications.error("You must have an actor selected!");
 
 setTimeout(async () => {
     new Dialog (
@@ -12,16 +12,16 @@ setTimeout(async () => {
                     label: 'Resize',
                     callback: html => {
                         const form = html.find('form')[0]
-                        let input = form.data.value;
+                        let resize_input = form.data.value;
                         if (isNaN(input)) {
                             return ui.notifications.error("Input must be a number!");
                         } else {
-                            input = parseFloat(input);
-                            let new_value = input*2 - 1;
-                            if (actor.isToken) {
-                                actor._findToken().update({"scale":new_value});
+                            resize_input = parseFloat(input);
+                            let new_value = resize_input*2 - 1;
+                            if (resize_actor.isToken) {
+                                resize_actor._findToken().update({"scale":new_value});
                             }
-                            return actor.update({"token.scale":new_value});
+                            return resize_actor.update({"token.scale":new_value});
                         }
                     }
                 },
